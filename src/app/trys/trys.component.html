@@ -1,0 +1,17 @@
+<p>
+  trys works!
+</p>
+{{clickMessage}}<br>
+<button (click)="onClickMe()">Click me!</button><br>
+keyup event: <input (keyup)="onKey($event)"><br>
+<p>You typed: {{values}}</p>
+<br>
+Input binding: <input #box (keyup)="0">
+<p>Input is: {{box.value}}</p><br>
+
+Passing Input through function: <input #boxFunc (keyup)="onKeyFunc(boxFunc.value)">
+Input value: <p>{{valuesFunc}}</p><br>
+
+Passing value on enter and blur: <input #boxEnter (keyup.enter)="onEnter(boxEnter.value)" (blur)="onEnter(boxEnter.value)">
+<p>You entered: {{valueEnt}}</p>
+

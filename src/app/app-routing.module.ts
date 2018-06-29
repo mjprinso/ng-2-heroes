@@ -16,6 +16,7 @@ import { HeroesComponent }      from './heroes/heroes.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 import { TrysComponent }  from './trys/trys.component';
+import { FormsComponent }  from './forms/forms.component';
 
 const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'tests', component: TrysComponent },
+  { path: 'forms', component: FormsComponent },
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],

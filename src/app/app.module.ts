@@ -15,6 +15,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { TrysComponent } from './trys/trys.component';
+import { FormsComponent } from './forms/forms.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TrysComponent } from './trys/trys.component';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    TrysComponent
+    TrysComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,

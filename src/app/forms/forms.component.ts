@@ -14,7 +14,19 @@ export class FormsComponent implements OnInit {
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
+  // form: heroForm;
+
+  onSubmit() { 
+    this.submitted = true;
+    console.log('form submitted');
+    this.model = new Hero(42, '', '');
+    // heroForm.form.reset()
+    // heroForm.resetForm(); // I think this is the one to use
+  }
+
+  newHero() {
+    this.model = new Hero(42, '', '');
+  }
 
   // TODO: Remove this when we're done
   get diagnostic() { return JSON.stringify(this.model); }

@@ -1,0 +1,70 @@
+
+  reactive-forms works!
+
+  <label>
+    Name:
+    <input type="text" [formControl]="name">
+    <button (click)="updateName()">Update Name</button>
+  </label>
+
+  <p>
+    Value: {{name.value}}
+  </p>
+
+  <section>
+    <h3>Hero Editor</h3>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <label>
+        First Name:
+        <input type="text" formControlName="firstName">
+      </label>
+      <br>
+      <label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+      </label>
+      <br>
+      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Hero Editor - 2</h3>
+    <form [formGroup]="profileForm2" (ngSubmit)="onSubmit2()">
+      <label>
+        First Name:
+        <input type="text" formControlName="firstName">
+      </label>
+      <br>
+      <label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+      </label>
+      <br>
+      <div formGroupName="address">
+        <h3>Address</h3>
+      
+        <label>
+          Street:
+          <input type="text" formControlName="street">
+        </label>
+        <br>
+        <label>
+          City:
+          <input type="text" formControlName="city">
+        </label>
+        <br>
+        <label>
+          State:
+          <input type="text" formControlName="state">
+        </label>
+        <br>
+        <label>
+          Zip Code:
+          <input type="text" formControlName="zip">
+        </label>
+      </div>
+      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    </form>
+  </section>
+

@@ -1,0 +1,38 @@
+<p>
+  planets works!<br>
+  A Planet resource is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
+</p>
+
+<div class="row">
+  <div class="col-md-4">
+    <!-- <ul class="planet">
+      <li *ngFor="let planet of planets">
+        <span>{{planet.name}}</span>
+
+        <button class="delete" title="delete hero"(click)="view()">x</button>
+      </li>
+    </ul> -->
+    <div class="panel panel-default" *ngFor="let planet of planets">
+      <div class="panel-heading">{{planet.name}}</div>
+      <div class="panel-body">
+        <p>
+          <b>Climate</b>: {{planet.climate}} <br>
+          <b>Diameter</b>: {{planet.diameter}} <br>
+          <b>Population</b>: {{planet.population}} <br>
+          <b>Orbital Period</b>: {{planet.orbital_period}} <br>
+          <b>People</b>: {{planet.residents.length}} <a href="">View</a><br>
+          <b>Films</b>: {{planet.films.length}} <a href="">View</a><br>
+
+        </p>
+        <!-- <button class="btn btn-sm btn-primary pull-right">View more</button> -->
+        <!-- <div class="btn-group">
+          <button type="button" class="btn btn-default">
+            Action
+          </button>
+        </div> -->
+      </div>
+    </div>
+
+
+  </div>
+</div>
